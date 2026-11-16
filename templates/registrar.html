@@ -1,0 +1,13 @@
+{% extends "base.html" %}{% block contenido %}
+{% if creada %}<div class="ok">Solicitud registrada. Su identificador es <strong>{{ creada.id }}</strong>.</div>{% endif %}
+{% if errores %}<div class="err"><ul>{% for e in errores %}<li>{{ e }}</li>{% endfor %}</ul></div>{% endif %}
+<form method="post" novalidate>
+<label>Nombre del solicitante<input name="nombre" value="{{ datos.nombre }}"></label>
+<label>Correo electrónico<input name="correo" value="{{ datos.correo }}"></label>
+<label>Tipo de problema<select name="tipo">
+{% for t in tipos %}<option {{ 'selected' if datos.tipo==t }}>{{ t }}</option>{% endfor %}</select></label>
+<label>Descripción (mínimo 15 caracteres)<textarea name="descripcion" rows="4">{{ datos.descripcion }}</textarea></label>
+<label>Prioridad<select name="prioridad">
+{% for p in prioridades %}<option {{ 'selected' if datos.prioridad==p }}>{{ p }}</option>{% endfor %}</select></label>
+<button type="submit">Enviar</button></form>
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends "base.html" %}{% block contenido %}
+<h2>Solicitudes registradas</h2>
+{% if solicitudes %}
+<table><tr><th>ID</th><th>Solicitante</th><th>Tipo</th><th>Descripción</th><th>Prioridad</th><th>Fecha</th></tr>
+{% for s in solicitudes %}<tr><td>{{ s.id }}</td><td>{{ s.solicitante }}</td><td>{{ s.tipo }}</td>
+<td>{{ s.descripcion }}</td><td>{{ s.prioridad }}</td><td>{{ s.fecha }}</td></tr>{% endfor %}</table>
+{% else %}<p>No hay solicitudes registradas.</p>{% endif %}
+{% endblock %}

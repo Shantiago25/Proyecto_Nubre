@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mesa de ayuda</title>
+<style>
+body{font-family:system-ui,sans-serif;max-width:860px;margin:2rem auto;padding:0 1rem;color:#222}
+nav a{margin-right:1rem}label{display:block;margin-top:.8rem;font-weight:600}
+input,select,textarea{width:100%;padding:.5rem;box-sizing:border-box}
+button{margin-top:1rem;padding:.6rem 1.2rem}
+.ok{background:#e6f6e6;padding:.8rem;border-radius:6px}
+.err{background:#fde8e8;padding:.8rem;border-radius:6px}
+table{border-collapse:collapse;width:100%}th,td{border:1px solid #ccc;padding:.4rem;text-align:left}
+</style></head><body>
+<h1>Mesa de ayuda del laboratorio</h1>
+<nav><a href="/">Registrar solicitud</a><a href="/solicitudes">Consultar solicitudes</a></nav><hr>
+{% block contenido %}{% endblock %}
+</body></html>
