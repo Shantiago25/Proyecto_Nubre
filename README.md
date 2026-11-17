@@ -48,3 +48,7 @@ solicitudes en la consulta. [Resultados en el informe]
 ## Despliegue en la nube
 URL pública: ((()))
 Persistencia en la nube:((()))
+
+## Prueba de persistencia 17/11/2026 2:02 PM
+se realizaron pruebas de persistencias para confirmar que los datos son consistentes
+los resultados fueron positivos, todos los datos están correctos
