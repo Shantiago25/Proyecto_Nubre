@@ -116,3 +116,13 @@ tr:nth-child(even) td { background: #f8fafd; }
   font-size: 0.85rem;
   margin: 2rem 0 1rem;
 }
+.etiqueta {
+  display: inline-block;
+  padding: 0.15rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.etiqueta.baja  { background: #e7f6ec; color: #1e7a45; }
+.etiqueta.media { background: #fff4d6; color: #8a6100; }
+.etiqueta.alta  { background: #fdecec; color: #b42323; }

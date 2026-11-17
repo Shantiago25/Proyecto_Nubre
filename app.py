@@ -72,7 +72,7 @@ def registrar():
 
 @app.route("/solicitudes")
 def consultar():
-    return render_template("consultar.html", solicitudes=leer())
+    return render_template("consultar.html", solicitudes=list(reversed(leer())))
 
 
 if __name__ == "__main__":
