@@ -46,8 +46,7 @@ Datos válidos, campo vacío, correo inválido, descripción corta y tres
 solicitudes en la consulta. [Resultados en el informe]
 
 ## Despliegue en la nube
-URL pública: ((()))
-Persistencia en la nube:((()))
+URL pública: https://mesa-ayuda-ww7a.onrender.com/
 
 ## Prueba de persistencia 17/11/2026 2:02 PM
 se realizaron pruebas de persistencias para confirmar que los datos son consistentes
