@@ -1,13 +1,31 @@
-# Mesa de ayuda web (Computación en la nube)
+# Mesa de ayuda web
 
-Aplicación Flask para registrar y consultar solicitudes de soporte. Datos en `solicitudes.json` (ficticios).
-Plantilla: desarrollo propio, apoyado con IA (declarar uso y fuentes en el informe).
+Proyecto final de Computación en la nube — Universidad Cooperativa de Colombia
+Integrantes: [Santiago Muñoz Perdomo, Jhonatan Figueroa, Alejandro Velasquez Rodriguez] | Código(s): [892883, 892658, 850777]
+
+## Descripción
+Aplicación web para registrar y consultar solicitudes de soporte técnico
+(equipos, internet, software).
+
+## Tecnologías
+Python 3, Flask, gunicorn, Docker. Almacenamiento en archivo JSON.
+
+## Procedencia del código y uso de IA
+Aplicación desarrollada con apoyo de IA (Claude) con ayuda
+para el código base. El grupo revisó, probó y
+adaptó el código
+
+## Requisitos
+- Python 3.8 o superior
+- Git
+- Docker Desktop
 
 ## Ejecución local (sin Docker)
     pip install -r requirements.txt
-    python app.py          # http://localhost:8000
+    python app.py
+Abrir http://localhost:8000
 
-## Docker
+## Ejecución con Docker
     docker build -t mesa-ayuda .
     docker run -d --name mesa -p 8000:8000 -v mesa-datos:/data mesa-ayuda
     docker ps
@@ -16,8 +34,17 @@ Plantilla: desarrollo propio, apoyado con IA (declarar uso y fuentes en el infor
 ## Prueba de persistencia
     docker rm -f mesa
     docker run -d --name mesa -p 8000:8000 -v mesa-datos:/data mesa-ayuda
-    (NO ejecutar `docker volume rm mesa-datos`)
+No se elimina el volumen `mesa-datos`: las solicitudes siguen disponibles.
 
 ## Almacenamiento
-JSON en `/data/solicitudes.json` dentro del contenedor, respaldado por el volumen `mesa-datos`.
-En la nube: explicar aquí si es persistente o temporal y qué pasa al reiniciar/redesplegar.
+Las solicitudes se guardan en `/data/solicitudes.json` dentro del contenedor.
+Esa carpeta está montada sobre el volumen `mesa-datos`, por eso los datos
+sobreviven si el contenedor se elimina y se vuelve a crear.
+
+## Pruebas de aceptación
+Datos válidos, campo vacío, correo inválido, descripción corta y tres
+solicitudes en la consulta. [Resultados en el informe]
+
+## Despliegue en la nube
+URL pública: ((()))
+Persistencia en la nube:((()))
